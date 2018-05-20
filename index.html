@@ -1,0 +1,308 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>CROP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<noscript>
+		<link rel="stylesheet" type="text/css" href="css/styleNoJS.css" />
+	</noscript>
+	<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+
+<script>
+$(document).ready(function () {
+  $("#menu li a").on("click", navbarBtnClick);
+  $(document).on("click", closeToggle);
+  $("#top").hide().fadeIn(1000);
+});
+/* close toggle if it's open and clicked outside toggle */
+function closeToggle(event) {
+  var clickover = $(event.target);
+  var _opened = $(".navbar-collapse").hasClass("in");
+  // BUG: hasClass("navbar-toggle") doesn't quite work like it should
+  if (_opened === true && !clickover.hasClass("navbar-toggle")) {
+      $("button.navbar-toggle").click();
+  }
+}
+function navbarBtnClick(event) {
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+    // Prevent default anchor click behavior
+    event.preventDefault();
+    // Store hash (#)
+    var hash = this.hash;
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area (the speed of the animation)
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 800, function(){
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  } // End if statement
+  $(".navbar-collapse").collapse('hide');
+}
+</script>
+<script>	
+jQuery(document).ready(function($){
+    $('#goTop').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 800);
+        return false;
+    });
+});
+</script>
+
+<body data-spy="scroll" data-target=".navbar">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false" aria-controls="navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a id="goTop" class="navbar-brand" style="margin-top: -7px;" href="#top" title="CROP">
+					<img class="img-responsive" src="logo.png"></a>
+			</div>
+			<div id="myNavbar" class="navbar-collapse collapse">
+				<ul id="menu" class="nav navbar-nav navbar-right">
+					<li class=""><a href="#about">About Us</a>
+					</li>
+					<li class=""><a href="#activities">Activities</a>
+					</li>
+					<li class=""><a href="#gallery">Gallery</a>
+					</li>
+					<li class=""><a href="#contact">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<section id="top" class="one"></section>
+	<div class="cont">
+		<h1>CROP</h1>
+		<div class="txtcon">
+			<h4>COMPLETE</h4>
+			<h2>RURAL</h2>
+			<div class="styl">
+				<h4>OBSERVATION</h4>
+				<h2>POINT</h2>
+			</div>
+		</div>
+		<p class="quote">"Indulge in pure soil and reap the riches of nature's blessing."</p>
+	</div>
+
+	<section id="about" class="two">
+		<h2>- About Us -</h2>
+		<p>Agritourism is defined more broadly, involves any agriculture-based operation or activity that brings visitors to a farm or ranch. Agritourism has different definitions in different parts of the world, and sometimes refers specifically to farm stays , Agritourism includes a wide variety of activities including buying produce directly from a farm stand, navigating in the orchid plantation, corn fields and horticulture fields, picking fruits and vegetables and animals. Agritourism is a form of niche tourism that is considered a growth industry in parts of the world, with value add products, farm direct marketing and sustainable agriculture.</p>
+		<h4>About Agrowvillage</h4>
+		<p>There is more lesson to be learnt from soil than from classroom. No teacher better than nature can teach a child the lesson of discipline, hard work, timeline, patience, judgment, risk management, resource optimization and profitability. Agrowvillage has been conceptualized to bring people close to the nature through exposure to farming and agriculture. The dedicated team of nature lovers with knowledge and expertise in farming and, agriculture arrange field trips for children. Children get a much require break from the world of mobile, TV and other gadgets to indulge themselves in the bliss of greenery. They get an opportunity to try their hands-on farming and are introduced to basic concepts, techniques and technology related to agriculture.</p>
+		<p>Come, indulge in pure soil and reap he riches of nature's blessings.</p>
+	</section>
+
+	<section id="activities" class="three">
+		<h2>- Activities -</h2>
+		<div class="container demo-2">
+			<div id="slider" class="sl-slider-wrapper">
+
+				<div class="sl-slider">
+
+					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+						<div class="sl-slide-inner">
+							<div class="bg-img bg-img-1"></div>
+							<div class="shade"></div>
+							<h2>Uriadi attam.</h2>
+						</div>
+					</div>
+
+					<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
+						<div class="sl-slide-inner">
+							<div class="bg-img bg-img-2"></div>
+							<div class="shade"></div>
+							<h2>Bullock cart rides.</h2>
+						</div>
+					</div>
+
+					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
+						<div class="sl-slide-inner">
+							<div class="bg-img bg-img-3"></div>
+							<div class="shade"></div>
+							<h2>Involving in Livestock.</h2>
+						</div>
+					</div>
+
+					<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="-5" data-slice2-rotation="25" data-slice1-scale="2" data-slice2-scale="1">
+						<div class="sl-slide-inner">
+							<div class="bg-img bg-img-4"></div>
+							<div class="shade"></div>
+							<h2>Tractor rides.</h2>
+						</div>
+					</div>
+
+					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-5" data-slice2-rotation="10" data-slice1-scale="2" data-slice2-scale="1">
+						<div class="sl-slide-inner">
+							<div class="bg-img bg-img-5"></div>
+							<div class="shade"></div>
+							<h2>Finding the Largest vegetable.</h2>
+						</div>
+					</div>
+				</div>
+
+				<nav id="nav-arrows" class="nav-arrows">
+					<span class="nav-arrow-prev">Previous</span>
+					<span class="nav-arrow-next">Next</span>
+				</nav>
+
+				<nav id="nav-dots" class="nav-dots">
+					<span class="nav-dot-current"></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</nav>
+			</div>
+		</div>
+	</section>
+
+	<section id="gallery" class="gal">
+		<h2>- Gallery -</h2>
+		<div class="m-p-g">
+			<div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
+				<img src="Images/gallery/1.jpg" data-full="Images/gallery/1.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/2.jpg" data-full="Images/gallery/2.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/3.jpg" data-full="Images/gallery/3.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/4.jpg" data-full="Images/gallery/4.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/5.jpg" data-full="Images/gallery/5.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/6.jpg" data-full="Images/gallery/6.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/7.jpg" data-full="Images/gallery/7.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/8.jpg" data-full="Images/gallery/8.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/9.jpg" data-full="Images/gallery/9.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/10.jpg" data-full="Images/gallery/10.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/11.jpg" data-full="Images/gallery/11.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/12.jpg" data-full="Images/gallery/12.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/13.jpg" data-full="Images/gallery/13.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/14.jpg" data-full="Images/gallery/14.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/15.jpg" data-full="Images/gallery/15.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/16.jpg" data-full="Images/gallery/16.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/17.jpg" data-full="Images/gallery/17.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/18.jpg" data-full="Images/gallery/18.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/19.jpg" data-full="Images/gallery/19.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/20.jpg" data-full="Images/gallery/20.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/21.jpg" data-full="Images/gallery/21.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/22.jpg" data-full="Images/gallery/22.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/23.jpg" data-full="Images/gallery/23.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/24.jpg" data-full="Images/gallery/24.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/25.jpg" data-full="Images/gallery/25.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/26.jpg" data-full="Images/gallery/26.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/27.jpg" data-full="Images/gallery/27.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/28.jpg" data-full="Images/gallery/28.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/29.jpg" data-full="Images/gallery/29.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/30.jpg" data-full="Images/gallery/30.jpg" class="m-p-g__thumbs-img" />
+				<img src="Images/gallery/31.jpg" data-full="Images/gallery/31.jpg" class="m-p-g__thumbs-img" />
+			</div>
+			<div class="m-p-g__fullscreen"></div>
+		</div>
+	</section>
+
+	<section id="contact" class="five col-md-12">
+		<div id="map" class="col-md-6"></div>
+		<div class="col-md-6 conus">
+			<div class="cot">
+				<span class="title">
+					<img src="Images/Logo.png" />
+					<h2>CROP</h2>
+				</span>
+					<span>
+					<img src="Images/003-placeholder.png">
+					<p>&nbsp;#4/1A,Nathanallur, Vandaloor-Walajabad Road, Walajabad TK., Kanchipuram Dist., Walajabad-631605</p>
+				</span>
+					<span>
+					<img src="Images/002-envelope.png">
+					<p>&nbsp;argrowvillage.chennai@gmail.com</p>
+				</span>
+					<span>
+					<img src="Images/001-telephone.png">
+					<p>&nbsp;+91-9884356665</p><p>&nbsp;&nbsp;&nbsp;+91-8637663243</p>
+				</span>
+			</div>
+		</div>
+	</section>
+</body>
+
+<!--Activites-->
+<script type="text/javascript" src="js/jquery.ba-cond.min.js"></script>
+<script type="text/javascript" src="js/jquery.slitslider.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var Page = (function() {
+			var $navArrows = $('#nav-arrows'),
+				$nav = $('#nav-dots > span'),
+				slitslider = $('#slider').slitslider({
+					onBeforeChange: function(slide, pos) {
+						$nav.removeClass('nav-dot-current');
+						$nav.eq(pos).addClass('nav-dot-current');
+					}
+				}),
+				init = function() {
+					initEvents();
+				},
+				initEvents = function() {
+					// add navigation events
+					$navArrows.children(':last').on('click', function() {
+						slitslider.next();
+						return false;
+					});
+					$navArrows.children(':first').on('click', function() {
+						slitslider.previous();
+						return false;
+					});
+					$nav.each(function(i) {
+						$(this).on('click', function(event) {
+							var $dot = $(this);
+							if (!slitslider.isActive()) {
+								$nav.removeClass('nav-dot-current');
+								$dot.addClass('nav-dot-current');
+							}
+							slitslider.jump(i + 1);
+							return false;
+						});
+					});
+				};
+			return {
+				init: init
+			};
+		})();
+		Page.init();
+	});
+</script>
+<!--Gallery-->
+<script>
+	var elem = document.querySelector('.m-p-g');
+	document.addEventListener('DOMContentLoaded', function() {
+		var gallery = new MaterialPhotoGallery(elem);
+	});
+</script>
+<script type="text/javascript" src="js/material-photo-gallery.min.js"></script>
+<!--Map-->
+<script>
+	function initMap() {
+        var location = {lat: 12.812684, lng: 79.841616};
+        var map = new google.maps.Map(document.getElementById('map'), {
+        	zoom: 10,
+        	center: location
+        });
+        var marker = new google.maps.Marker({
+        	position: location,
+        	map: map,
+//			animation:google.maps.Animation.BOUNCE
+        });
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwXHTHspXxclmDj8GzI0OIxgAcbILvXGY&callback=initMap" type="text/javascript"></script>
+</html>
